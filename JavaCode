@@ -1,0 +1,69 @@
+import java.util.ArrayList;  
+
+import java.util.Scanner; 
+
+public class Election {/*Class name*/ 
+
+public static void main(String[] args) { 
+    /*create the list for candidates and vote counts*/ 
+    ArrayList<String> candidates = new ArrayList<>();/*arraylist to candidates*/ 
+    ArrayList<Integer> counts = new ArrayList<>();/*arraylist to counts*/ 
+    boolean looping = true; 
+     
+    Scanner input = new Scanner(System.in);/*Scanner to user inputs*/ 
+     
+    System.out.println("##############################################\n" + 
+            "Enter votes (type -1 or press Enter to finish): \n" + 
+            "##############################################\n");/*print out the main head*/ 
+    /*loop to designate the candidate and votes*/ 
+    while (looping) { 
+        try { 
+            System.out.println("Enter the candidate name: "); 
+            /*input the name of candidate*/ 
+            String candidate = input.nextLine().trim(); 
+            /*stop the program if the user types "-1" or leaves input empty*/ 
+            if (candidate.equals("-1") || candidate.isEmpty()) { 
+                looping = false; 
+                break;} 
+            /*check if the candidate exists*/ 
+            int index = candidates.indexOf(candidate); 
+            if (index != -1) { 
+                /*add vote if candidate exists*/ 
+                counts.set(index, counts.get(index) + 1); 
+            } else { 
+                /*add new candidate to list*/ 
+                candidates.add(candidate); 
+                counts.add(1); 
+            } 
+        /* validate the loop and restart the input*/ 
+        } catch (Exception e) { 
+            System.out.println("Invalid input! Please try again."); 
+            input.nextLine(); 
+        } 
+    } 
+    /*shows the results*/ 
+    displayResultsAndWinner(candidates, counts);} 
+/*logic to results and look the winner*/ 
+private static void displayResultsAndWinner(ArrayList<String> candidates, ArrayList<Integer> counts) { 
+    if (candidates.isEmpty()) { 
+        System.out.println("No votes."); 
+        return;} 
+    System.out.println("\n And the results for the Election is: "); 
+    /*variable to track winner*/ 
+    String winner= null; 
+    int maxCounts = 0; 
+    /*Loop to calculate the votes to each candidate*/ 
+    for(int i = 0; i < candidates.size(); i++ ) { 
+        System.out.println(candidates.get(i) + ": " + counts.get(i) + " votes"); 
+        /*statement to get the winner*/ 
+        if (counts.get(i) > maxCounts) { 
+            maxCounts = counts.get(i); 
+            winner = candidates.get(i);} 
+    } 
+    /*Output of the winner and how many votes*/ 
+    System.out.println ("And the winner with most votes is: " + winner + " with " + maxCounts + " votes!"); 
+
+} 
+  
+
+} 
