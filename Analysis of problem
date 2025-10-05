@@ -1,0 +1,14 @@
+How are you going to solve the problem? 
+
+First, when I identified the problem, I defined two arraylists, one for the candidates and the other for the votes. 
+I defined a boolean variable for the loop to continue running the program every time it is true or exit when the user wants. 
+In the loop, the code stores the candidate's name and the number of votes, adding them until the count is finished, or creating a new entry every time a new candidate is inserted. 
+The result is looped through two lists that show the candidates and another that shows the number of votes, to finally show the winner and how many votes he had. 
+
+What programming constructs and techniques are you using? Why? 
+
+I chose to use the arraylist instead of the array because it allows me to store the candidates in an optimized and practical way, making my code cleaner and more efficient. 
+I used a while loop to continue the code even when a candidate receives a vote or until the user wants to exit. I used the for loop to calculate the votes for each candidate and show the results. 
+I also used the if.else to check the inputs used by the user, verify if each candidate exists and determine the number of votes for each one. I used the input scanner for the user to enter information. 
+I used the try-catch to validate inputs and avoid errors or wrong inputs. I also used a string trim manipulation that removes the spaces around the inputs, helping to keep the format in which the candidates appear consistent. 
+I also used a logical comparison to compare the votes and see who was the winner. Finally, the displayResultsAndWinner encapsulation was a logic used to determine the winner. 
