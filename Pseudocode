@@ -1,0 +1,101 @@
+Start 
+
+Initialize an empty list `candidates` to store candidate names 
+
+Initialize an empty list `counts` to store the corresponding vote counts for each candidate 
+
+Set a boolean variable `looping` to `true` to control the input loop 
+
+  
+
+Create a Scanner object `input` to read user inputs 
+
+  
+
+Print the election header message: 
+
+Enter votes type -1 or press Enter to finish 
+
+  
+
+WHIle looping is true 
+
+Try 
+
+Print Enter the candidate name 
+
+Read user input as a string `candidate` and trim leading/trailing spaces. 
+
+  
+
+If `candidate` is equal to "-1" OR `candidate` is empty: 
+
+Set `looping` to `false` to exit the loop. 
+
+Break from the loop. 
+
+  
+
+Check if `candidate` exists in the `candidates` list: 
+
+If `candidate` exists: 
+
+Find its index in the `candidates` list. 
+
+Increment the corresponding vote count in the `counts` list at the same index. 
+
+Else: 
+
+Add `candidate` to the `candidates` list. 
+
+Add `1` to the `counts` list as the initial vote count. 
+
+  
+
+Catch any input exceptions: 
+
+Print "Invalid input! Please try again." 
+
+Clear the scanner buffer. 
+
+  
+
+Call the `displayResultsAndWinner(candidates, counts)` method to display results. 
+
+  
+
+Method displayResultsAndWinner(candidates, counts) 
+
+If `candidates` list is empty 
+
+Print No votes. 
+
+Return from the method 
+
+  
+
+Print And the results for the Election is 
+
+  
+
+Initialize variables 
+
+winner to store the name of the candidate with the most votes 
+
+maxCounts to store the maximum vote count initially `0` 
+
+  
+
+For each index `i` in the range of the size of the `candidates` list 
+
+Print the candidate name at index `i` and their vote count from the `counts` list. 
+
+If the vote count at index `i` is greater than `maxCounts` 
+
+Update `maxCounts` with the vote count at index `i`. 
+
+Update `winner` with the candidate name at index `i` 
+
+  
+
+Print And the winner with most votes is winner with maxCounts votes
