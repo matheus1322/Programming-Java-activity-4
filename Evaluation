@@ -1,0 +1,19 @@
+What are the strengths of your solution? 
+
+The strengths of my code are that by using arraylist I have control over the number of candidates without having to predefine it, making my program flexible without making it predictable. 
+Also, the input vote process and the winner result were done separately, thus giving greater control over the manipulation of the code, which makes the code easier to read and change. 
+The program also has user input validation, to make sure that no wrong entries are made. The feedback prompts are also a strong point because they are intuitive and help the user to use the program correctly. 
+Not to mention that the solution to the problem allows and supports any adjustment in the size of the elections, given that the arraylist has great scalability. 
+
+ 
+
+What are the weaknesses? 
+
+The weaknesses of my code are that it is inefficient in searching for candidates, because the arraylist searches linearly for each new vote, which can cause the search to slow down as the number of votes and candidates increases. 
+We also assume that the program chooses a winner if there is a tie in votes. The program also has poor error control. It assumes valid inputs but does not produce more complete feedback on errors, which can end up generating more input errors on the part of the user. 
+
+In what way could it be improved? 
+
+I looked for ways to improve my program. One of them would be to redo the structure of the arraylist in hashmap, putting the names of the candidates as key and counts as value. 
+I could also increase the result of the logical calculations to detect ties, so if one or more candidates have the same number of votes I could make a choice based on other indications. 
+I could also improve the output and comments with more robust and complete feedback, and also provide a way for the user to change or remove a vote. 
